@@ -1,0 +1,266 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{0.2,0.8,0.2}
+
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.7in}
+
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+\titlefont Medical Devices\par
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.6]{title.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Digital Subtraction Angiography}
+
+Digital Subtraction Angiography (DSA) is the acquisition of digital fluoroscopic images combined with injection of contrast material and real-time subtraction of pre- and post contrast images to perform angiography. It is a special method that uses flouroscopy (medical imaging system that shows a continuous X-ray image on a monitor), which gives high quality images of the  blood vessels that are filled with liquid dye, usually an iodine dye, called contrast. DSA was invented by a group of medical physicists headed by Charles A. Mistretta, and was introduced in the early 1980s.\\\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{DSA_Machine.jpeg}
+\caption{DSA Machine}
+\end{figure}
+
+Digital Subtraction Angiography contains two words- subtraction and angiography- \\
+DSA is a simple technique by which bone structures images are cancelled out or subtracted from a film of bones plus opacified vessels, leaving and unobscured image of the vessels, hence the word subtracted.\\
+The word “Angio” refers to blood vessels and angiography is the radiological study of blood vessels in the body after introduction of iodinated contrast media. We need contrast media because blood vessels are not normally seen in X-ray images, because of low tissue contrast.\\
+Digital images are obtained before and after injection of contrast medium , to differentiate vascular pathology from surrounding anatomy. It is a non invasive procedure , that provides improved image quality with lesser use of contrast medium.\\\\
+
+Application\\
+DSA is primarily used to image blood vessels. It is useful in the diagnosis and treatment of arterial and venous occlusions (blockages), including carotid artery stenosis, a condition where large-sized arteries on both sides of the neck are narrowed, pulmonary embolisms (blockage in pulmonary artery of lungs), and acute limb ischemia (reduced blood flow in a part of the body); arterial stenosis (narrowing of arteries carrying blood to kidneys), which is particularly useful for potential kidney donors in detecting renal artery stenosis. DSA is the gold standard investigation for renal artery stenosis.
+Provides an image of the blood vessels in the brain to detect a problem with blood flow. The procedure involves inserting a catheter (a small, thin tube) into an artery in the leg and passing it up to the blood vessels in the brain.\\\\
+
+Procedure Of DA Imaging\\
+
+STEP I : - Image of a particular anatomical region is recorded. This is called MASK image, ([Figure\ref{fig_procedure}] A), which shows normal anatomy of the region . It require two frames, the first is used to stabilize the system (technical factors) and the second frame is stored as mask image in the computer.\\
+
+STEP II :- The patient is injected with contrast to fill the vessels and the image is taken . It is called CONTRAST IMAGE, ([Figure\ref{fig_procedure}] B), which shows contrast filled vessels, superimposed on the anatomy.\\
+
+STEP III : - The mask image is subtracted from the contrast image , by pixel by pixel basis and stored as CONTRAST- MASK IMAGE ([Figure\ref{fig_procedure}] C). This image reveals only vessels filled with contrast medium.\\
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{Procedure.jpeg}
+\caption{Images produced during the procedure}
+\label{fig_procedure}
+\end{figure}
+
+The final image is viewed in real time There should not be any movement of the patient during the above procedure and the images are obtained rapidly. If the length of the anatomy is greater than FOV, then multiple images to cover the entire anatomy is to be taken . Each time the contrast is injected to the region. However , modern machine provides software that acquires several mask images and contrast images over the full length of anatomy. This is facilitated by table movement  and its position for each image. Appropriate mask image for a given table position is subtracted from the contrast image.\\\\
+
+During the process the patient must be sedated to reduce anxiety because eve the slightest movement can cause distortion in images. Also prolong exposure to X-rays can cause damage to sensitive tissues. Due to these complications DSA is done less and less routinely in imaging departments. It is being replaced by computed tomography angiography (CTA), which can produce 3D images through a test which is less invasive and stressful for the patient, and magnetic resonance angiography (MRA), which avoids X-rays and nephrotoxic contrast agents.
+
+
+
+\clearpage
+
+\section{Bone Densitometer}
+
+Bone densitometry is a test that calculates bone density quickly and accurately and is used to discover osteoporosis, a condition that cause the bone to lose minerals and density, which increases the possibility of fractures. The machine used to conduct the test is called a \textbf{Bone Densitometer} . Bone densitometer utilizes dual energy X-ray absorptiometry, so the the is also called \textbf{DXA} or \textbf{DEXA}.\\
+
+The main bone densitometer equipment usually consists of a central device, and occasionally an additional peripheral device (pDXA). Both are referred to as DXA or DEXA equipment. The central device measures bone density in the hip and spine and is usually found in a hospital or medical practice setting. It has a large, flat table with a suspended arm over head. For smaller bones like the wrist, heel, or finger, a peripheral device is often sufficient. It is much smaller, weighing only about 25kgs to 30kgs, and is a portable box that can accommodate a foot or hand.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Bone Densitometer.jpeg}
+\caption{Bone Densitometer}
+\end{figure}
+
+The technology and the science of dual energy X-ray absorptiometry and two dimensional measurement of bone mass was introduced by Dr. Richard Cameron and Dr. Richard Mazzes. Bone Densitometer uses the concept of dual energy x-ray delivery methods to better differentiate between soft tissues from bone and thereby enhance the direct bone edge mea- surement. Low dose X-Ray beams are projected towards the target area and two energy peaks (30-50KeV and >70KeV) are obtained that penetrate the bones in the scan process. One is for soft tissue absorption, and the other is for bone. The soft tissue absorption quantity is subtracted from the bone absorption quantity, and the remaining amount is the patient’s bone density. The device  analyzes the bone density measurements and displays the results on a computer monitor. \\
+
+During an exam using the central bone densitometer to measure hip and spine bone density, the patient will remain still and prone on a padded table. The X-ray generator is below the patient and the imaging device, also known as a detector is located above the patient. The legs are supported on a padded box when scanning the spine, and for scanning the hip, the foot is placed in a brace to rotate the hip inward. For both the hip and spine scan, the detector moves slowly over the area to create images that are displayed on the computer monitor. Peripheral bone density exams are faster, with results available in a few minutes. The central bone densitometer device test usually takes up to 30 minutes, depending on the type and extent of exam.\\
+
+Precautions to taken during the test:\\ 
+The patient should leave jewelry at home, wear loose clothing, and avoid taking a calcium supplement in the 24 hours before the test. The patient must remain very still and hold the breath for several seconds, while the technician conducts the test from behind a protective wall. Other parts of the body may be shielded from the X-rays with protective equipment.\\
+
+Advantages of DEXA test:\\
+DXA bone densitometry is a simple, quick and noninvasive procedure which can be performed without the use of anesthesia.The amount of radiation used is extremely small—less than one-tenth the dose of a standard chest x-ray, and less than a day's exposure to natural radiation. The bone density exam is a good predictor of risk of fracture or bone-related medical conditions and can guide preventive medicine prescriptions. X-rays usually have no side effects in the typical diagnostic range for this exam. DXA is also increasingly used to measure body composition in terms of fat and fat-free mass.
+
+\clearpage 
+
+\section{Magnetic Cell Separator}
+
+A magnetic cell separator is an immunomagnetic separation system. The process of separating cells utilizes antibody-antigen binding specificity to label cells for separation as well as a powerful but stable magnet to bind the molecules of interest out of solution. Monoclonal antibodies are conjugated to magnetic beads and subsequently mixed with a heterogeneous solution of cells. The monoclonal antibodies that are introduced into the mixture will specifically bind the surface proteins of your target cells of interest.\\
+
+A magnetic cell separator utilizes a magnet to pull those pre-bound target cells away from a mixture of cells. Such a process can be used for positive and negative selection. The magnetic cell separator can come in many sizes, from eppendorf size to a magnet capable of separating biological materials in several liters of solution. It is very important, especially as the volume gets large, that this magnet produces a force that can efficiently but steadily separate molecules.\\
+
+Typically for positive selection, the separation method begins by placing your container of pre-bound mixture into the magnetic cell separator, which attracts the magnetic bead-conjugated antibodies to the edges of the container towards the magnetic chamber. While your cells of interest are bound to their container by the attraction of the magnetic beads to the magnetic force of the chamber, the solution within the container can be disposed, removing all non-labeled cells. A new cell-free solution can be placed into the container in the magnetic chamber. Removing the tube from the magnetic chamber will release your target cells back into solution.\\
+
+Similar to positive selection, in a negative selection experiment, while cells are magnetized by the magnetic cell separator to the edges of the container you can remove the solution of non-labeled cells. The solution you removed from the container in the magnetic chamber is now selected for all cells except the cell type you bead-conjugated.\\
+
+
+Other methods have been developed such as the column separation. These approaches flow the pre-bound mixture of cells through a column of ferromagnetic beads, which become magnetized in the presence of a magnetic field created by an adjacent magnet. Magnetic bead bound cells of interest are bound by ferromagnetic beads in the column while the rest of the solution of cells flows through. To elute target cells, the magnet is removed from the vicinity of the column and beads can flow out.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.33]{Magnetic Cell Separation.jpeg}
+\caption{Immunomagnetic Separation}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{Column Separation.jpeg}
+\caption{Column Separation}
+\end{figure}
+
+
+Advantages of the Magnetic Cell Separator\\
+Magnetic cell separation is regarded as the ideal approach when balancing cost and specificity needs for cell sorting. The process is faster than fluorescence activated cell sorting (FACS) because while FACS sorts cells one at a time, the magnetic cell separator can separate in bulk. Immunomagnetic sorting is also cheaper because it does not require expensive machinery and its required reagents. Centrifugation and filtration are commonly used for separation but have become favored as preliminary separation techniques as they produce low purity and yield. Overall, the magnetic cell separator is favored for its simplicity and the purity of the samples that it can produce.
+ 
+\clearpage
+
+\section{Pacemaker}
+
+The normal, healthy heart has its own pacemaker that regulates the rate that the heart beats. However, some hearts don’t beat regularly. For such hearts pacemaker is the ultimate solution for their problem. A pacemaker is a small device that sends electrical impulses to the heart muscle to maintain a suitable heart rate and rhythm. A pacemaker may also be used to treat fainting spells (loss of conciousness) or syncope, congestive heart failure, and hypertrophic cardiomyopathy (thickening of heart muscles). It is a small box surgically implanted in the chest cavity and has electrodes that are in direct contact with the heart. First developed in the 1950s, the pacemaker has undergone various design changes and has found new applications since its invention.\\
+
+Components of Pacemaker\\
+
+A permanent pacemaker has three main components:\\
+1. A pulse generator having sealed lithium battery and an electronic circuitry package.\\
+2. One or more wires (also called leads). Leads are insulated flexible wires that conduct electrical signals to the heart from the pulse generator. The leads also relay signals from the heart to the pulse generator. One end of the lead is attached to the pulse generator and the electrode end of the lead is positioned in the atrium (the upper chamber of the heart) or in the right ventricle (the lower chamber of the heart). In the case of a biventricular pacemaker, leads are placed in both ventricles.\\
+3. Electrodes, which are found on each lead.\\\\\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{pacemaker.jpeg}
+\caption{Pacemaker}
+\end{figure}
+
+Types of Pacemakers:\\
+1. Pacemakers that pace either the right atrium or the right ventricle are called “single-chamber” pacemakers.\\
+2. Pacemakers that pace both the right atrium and right ventricle of the heart and require two pacing leads are called “dual-chamber” pacemakers.\\
+3. Pacemakers that pace the right atrium and right and left ventricles are called “biventricular” pacemakers.\\
+
+
+
+Sometimes pacemakers may cause unwanted complications during and after implantation. Complications related with the implantation process are rare, but include bleeding, infection, or collapsed lung. In general, each of these problems can be treated quite successfully. Leads sometimes displaces from the original implant site in the first few days to few weeks following the implantation. Though rare, pacemaker problems can occur long after the implantation procedure. These “late” complications include generator malfunction, and lead failure (less rare). Most of these complications are uncommon, and can be prevented by simple manoeuvres.\\
+
+There is a new breakthrough in field of medical science that is Wireless pacemakers .They are designed to avoid these problems. Because wireless pacemakers have no leads and are not implanted under the skin, they avoid lead-related complications altogether. A leadless pacemaker provides the opportunity of bypassing these complications, but requires a catheter-based delivery system and a means of retrieval at the end of the device’s life, as well as a way of relocating to achieve satisfactory pacing thresholds and R waves, a communication system and low peak energy requirements.\\
+
+The leadless pacemaker is put in place using a long, thin tube called a catheter. The catheter is inserted into the femoral vein through a very small incision in your groin. Physician will numb this area with local anesthetic (pain-relieving medication). Your doctor will use an X-ray machine to guide the catheter to your heart. Once the catheter is inside the right ventricle, physician will place the pacemaker into position in the heart. The device is tested to make sure it is attached to the wall and programmed correctly. Then, the catheter is removed and the incision site is closed by applying pressure to the area.\\
+The procedure takes about 30 minutes to complete, although this can vary patient-to-patient based on individual anatomical consideration.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.25]{Leadless pacemaker.jpeg}
+\caption{Leadless Pacemaker}
+\end{figure}
+
+
+Advantages of leadless pacemakers:\\
+1. Reduced surgery time\\
+2. Longer device life as compared to conventional device\\
+3. Less complication due to device\\
+4. Less infection and complication risk after implantation\\
+
+\clearpage
+\section{Nebulizer}
+
+A nebulizer is a device that is used for breathing treatments such as asthma, cystic fibrosis, and other respiratory illnesses. It changes liquid medicine into an aerosol. Nebulizers use oxygen, compressed air or ultrasonic power to break up medical solutions and suspensions into small aerosol droplets that can be directly inhaled from the mouthpiece of the device. They are often used in situations in which using an inhaler is difficult or ineffective. Nebulizers are also used to limit the side effects of medications like steroids by delivering the medicine directly to the respiratory system.\\
+
+Nebulizers convert liquids into aerosols of a size that can be inhaled into the lower respiratory tract. The process of pneumatically converting a bulk liquid into small droplets is called atomization. Pneumatic nebulizers have baffles incorporated into their design so that most of the droplets delivered to the patient are within the respirable size range of 1–5 micrometers. Ultrasonic nebulizers use electricity to convert a liquid into respirable droplets.\\
+
+\begin{figure}[h] 
+\centering 
+\includegraphics[scale=0.3]{nebulizer.jpeg} 
+\caption{Nebulizer} 
+\end{figure}
+
+Nebulizers are useful for several reasons. First, some drugs for inhalation are available only in solution form. Second, some patients cannot master the correct use of metered-dose inhalers or dry powder inhalers. Third, some patients prefer the nebulizer over other aerosol generating devices.\\
+
+The operation of a pneumatic nebulizer requires a pressurized gas supply as the driving force for liquid atomization (Figure\ref{fig_neb2}). Compressed gas is delivered through a jet, causing a region of negative pressure. The solution to be aerosolized is entrained into the gas stream and is sheared into a liquid film. This film is unstable and breaks into droplets because of surface tension forces. A baffle is placed in the aerosol stream, producing smaller particles and causing larger particles to return to the liquid reservoir. More than 99\% of the particles may be returned to the liquid reservoir. The aerosol is delivered into the inspiratory gas stream of the patient. Before delivery into the patient’s respiratory tract, the aerosol can be further conditioned by environmental factors such as the relative hu- midity of the carrier gas.\\
+
+\begin{figure}[h] 
+\centering 
+\includegraphics[scale=1]{neb2.jpeg} 
+\caption{Basic components of the design of pneumatic nebulizers.} 
+\label{fig_neb2}
+\end{figure}
+
+To improve aerosol penetration and deposition in the lungs, the patient should be encouraged to use a slow and deep breathing pattern. Several nebulizer designs have been made to decrease the amount of aerosol lost during the expiratory phase.These include reservoir bags to collect aerosol during the expiratory phase, the use of a vented design to increase the nebulizer output during the inspiratory phase (breath-enhanced nebulizers), and nebulizers that only generate aerosol during the inspiratory phase (breath-actuated nebulizers). Because these designs improve drug delivery to the patient, they have the potential to reduce treatment time, which should improve patient compliance with nebulizer therapy.\\
+
+Ultrasonic Nebulizers\\
+
+Ultrasonic nebulizers have been clinically available since the 1960s. Small-volume ultrasonic nebulizers are commercially available for delivery of inhaled bronchodilators. Large-volume ultrasonic nebulizers are used to deliver inhaled antibiotics in patients with cystic fibrosis. Several studies reported greater bronchodilator response with ultrasonic nebulizers than with other aerosol generators. The ultrasonic nebulizer uses a piezoelectric transducer to produce ultrasonic waves that pass through the solution and aerosolize it at the surface of the solution. The ultrasonic nebulizer creates particle sizes of about 1–6 micrometers.\\
+
+An ultrasonic nebulizer has 3 components: the power unit, the transducer, and a fan. The power unit converts electrical energy to high-frequency ultrasonic waves at a frequency of 1.3–2.3 megahertz. The frequency of the ultrasonic waves determines the size of the particles, with an inverse relationship between frequency and particle size. The transducer vibrates at the frequency of the ultrasonic waves applied to it (piezoelectric effect). The conversion of ultrasonic energy to mechanical energy by the transducer produces heat, which is absorbed by the solution over the transducer. A fan is used to deliver the aerosol produced by the ultrasonic nebulizer to the patient, or the aerosol is evacuated from the nebulization chamber by the inspiratory flow of the patient.
+
+\end{document}
