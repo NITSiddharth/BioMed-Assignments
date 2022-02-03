@@ -1,0 +1,129 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{0.75, 0,1}
+
+{%
+\centering
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+}
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+{%
+\centering
+\titlefont Evolution of Modern Health-Care System\par
+}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.6]{title2.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+
+As late as in the 1850s, the era of industrialisation, globalisation, improving lifestyle standards and other mechanical advancements, esta- blishing a formal health-care system was not one of the sectors where much attention was led upon by governments and people around the world. This can be clearly seen in the fact that average life span of a man was mere 35 years compared to 75 years today. Epidemics ware a common phenomenon, most of the diseases were incurable, people were not able to treat common viral diseases and sought out for home remedies to find some cure. Most of the suregeries took place at home and mostly not by the doctors but someone who claimed themselves to have a knowledge of medical science. With traditional knowledge, people were able to heal themselves to some extent but there was still an urgent need for modern health infrastructure.\\
+
+Fast-forward to the present day, with the help of scientific and medical advancements, engineering inventions, and rigorous efforts of the governments towards improving heath infrastructure, human has been able to find the
+medicines to most of these above mentioned challenges. Now, with the help of  a doctor can cure a patient sitting thousands of kilometres away with the help of technology, patients do not have to wander anymore to find medical help as most of the health centres in cities and towns are well-equipped with highly qualified doctors, advanced and accurate devices. Diagnosis is done instantly and treatment is quick without wasting any vital time with these instruments.\\
+
+But what caused these improvements? One of the major reasons was formal medical education was given a high priority and physicians who were well acquainted with medical education began to be trusted by the people as they were being cured in significantly larger numbers— as compared to older traditional methods— in the hospitals built by the governments in huge numbers. Now, all the patients, poor or alike, were treated under the same roof.\\
+
+
+Advancements in science led to almost complete elimination of diseases like tuberculosis and cholera. Establishments of organizations like Red Cross,WHO, and Doctors Without Borders, led to the formati- ons of policies and projects that aims at solving the cause of the diseases rather than just curing it. Advances in medicine in diagnostic techniques, such as x rays, life saving drugs, such as penicillin, and vaccination against diseases, such as polio and BCG, had created an ever-deepening scientific culture that included laboratory technicians, therapists, widening roles for nurses, and increasing specialization amo- ng physicians.\\
+
+Introduction of Internet and WWW in the 1990s increased the available health information to the consumers. Computer and commun- ication advancement also allowed the practice of telemedicine. Inventi- ons of other such thousands of modern machineries in the last few decades has improved the effectivity of healthcare system exponentially by helping in accurate diagnosis and treatment and leading to a drop down the mortality rates to a very small fraction of its original number in the earlier twentieth century. Intervention of private sectors by setting up private hospitals and R\&D centres added fuel to the fire.\\\\
+
+\begin{Large}
+\textbf{Health care in India}\\
+\end{Large}
+
+Basic health infrastructure in the form of primary, secondary and tertiary health care services, improved a lot in India since independence. It is reflected in its increased number of hospitals and dispensaries, doctors, health care workers, testing laboratories etc. India’s phenome- nal success in the health services can be gauged by looking at various milestones achieved in the last 70 odd years and has succeeded in controlling communicable diseases like Malaria, Tuberculosis, Smallpox, leprosy, polio and AIDS etc. to a vast extent.\\
+
+Indicators such as Maternal Mortality Ratio (140 per 1 lakh in 2020), Infant mortality rate (32 per 1000 in 2020), life expectancy (33 years in 1951 and 70 in 2020) have shown a big improvement. Also a near universal immunisation of mothers and children has been achieved. Formation of various policies and laws by government has aided poor to take up quality health care facilities by proving monetary and other monetary support. Establishment of educational institutions has helped the country in producing world class doctors and engineers. All these factors have helped India to stride towards and almost achieve self sustainability in  health care.\\\\
+
+\begin{Large}
+\textbf{Bottlenecks and Way Forward}\\
+\end{Large}
+
+No doubt, the quality and longitivtiy of life has definitely improved in the last 50 years with all the advancements the we have made. But there are many areas in the medical sector we still have to work a lot to improve and make the face of medical sector spotless. Some parts helping and under-developed countries across continents are still facing uphill task of providing basic healthcare facilities and nutrition to its deprived citizens. The ratio of number of doctors and hospital beds to citizens is disheartening in these countries. Recent times has also showed us that we have to constantly improve to battle against the challenges shot at us by the nature. In this era of fast placed life, not only physical but the mental health has also become one of the major cause of concerns where we are still in the infant stage to find the cure to this problem.\\
+
+These problems can be tackled by creating awareness in the people by providing them both formal and informal education, promotion and encouragement of start-ups and innovation working in the medical field by government bodies and corporates by giving them monetary and technical guidance, setting up quality educational institutions in sub-urban and rural regions and structuring more policies and laws to enhance health care. We also have have make use of the technologies that will be coming up in the nest 10 to 20 years that will immensely improve the functioning of hospitals. Thus, the responsibility and power lies in the hands of the current generation to take bold and decisive step in medical sector to make this world a disease free planet and flourish.
+
+
+
+
+
+
+
+\end{document}
