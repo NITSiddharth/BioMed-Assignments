@@ -1,0 +1,137 @@
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{0,0.6,0.99}
+
+{%
+\centering
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+}
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+{%
+\centering
+\titlefont Future of Healthcare\par
+}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.35]{title 3.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+
+Healthcare affects us all. For many, the events of 2020 have made the threat and consequences of ill health more apparent than ever; for others it has underlined the importance of staying healthy, and the support networks we all need to do this.Pandemics like COVID-19 are part of the new normal, accelerating a changing approach to healthcare that accounts for the wider determinants of health and follows a more preventive model. The breadth of challenges we face – whether adequate nutrition, antimicrobial resistance or the effects of climate change – is daunting, and change will take time, investment and coordinated effort. Yet philosophically and financially there can be no going back.\\
+
+Here, we will try to look at the long-term future of healthcare as a collaborative, multi-disciplinary endeavour – one that extends far beyond physical healthcare assets to include transport networks, public spaces, reside- ntial and commercial design, urban planning and more.\\
+
+\paragraph{Preventive-}
+
+The scope of healthcare services looks likely to shift to a more preventive model that accounts for the wider determinants of health. This change is driven by a rise in chronic illness, environmental risk factors, personalised approaches to life-long health and economic pressures. New approaches to healthcare will seek to achieve health by or through design, with a greater emphasis on mental health and well-being, a balance of physical and digital solutions and better understanding of the role of green urban spaces.
+
+\paragraph{Accessibility-}
+
+Technology is transforming the ways in which healthcare professionals provide their services and how patients access them. Rapid advances in mobile as well as wearable and hearable technology, the increased emphasis on operational and cost efficiency, shifts in behaviour and lifestyle patterns, and changing business models are redefining when, where and how healthcare services are delivered and accessed.
+    
+\paragraph{Tech Centric-}
+
+Technology promises to improve our health, whether throu- gh embedded devices that will monitor and treat chronic conditions, richer data analysed by AI to inform personalised treatment, or by the use of gamified VR and AR treatment. But this ecosystem will also benefit from the increased one-on-one personal care we will receive as a result of automation and the reallocation of previous human
+resources, as well as more sensitive and therapeutic medical spaces.
+If challenges posed by the security of technol- ogy innovation, data ownership, ecosystem partnerships and funding can be overcome, future healthcare ecosystems will be digitally enhanced, centred around the patient experience and will incorporate environmental design elements to improve patient well-being and recovery.
+
+\paragraph{Data Driven-} Improved access to both physical and digital information and a better understanding of individual health needs means that the days of ‘one-size-fits-all’ healthcare solutions are over. Revolutionary new medical approaches and a greater appreciation of demographic and cultural needs are supporting the delivery of bespoke solutions. At the same time, tailored services in intelligent, adaptable spaces have the potential to deliver better outcomes whilst reducing costs. \\
+
+New AI-enabled processing technology combined with a greater quantity and accessibility to genetic data have kickstarted a wave of genomics research and personalised treatment. As the cost of technology continues to fall, it will place genomic sequencing technology at the heart of realising more precise, affordable and outcome-based care.59 It is anticipated that by 2040 \textbf{all new-borns will be DNA sequenced}, 60 presenting huge opportunities for how an individual’s health is managed across their lifetime and supporting precision medicine with treatments tailored to
+a person’s specific genomic makeup.
+
+\paragraph{Dynamic Hospitals-} In a future when healthcare systems in cities will be characterised by the need to provide on-demand, high tech, high-touch, bespoke and preventive services, the role of the built environment and its buildings will be more important than ever. The ‘monolithic’ physical form of conventional hospitals will need to adapt to an increasingly health-aware population, and an urban context where traditional boundari- es between modes and activities, public and private, and inside and outside are no longer fixed. At the same time, they will need to remain equipped to respond rapidly and locally to health crises.\\
+
+In the future, developments in preventive care and telemedicine will transf- orm usage patterns and reduce the number of people requiring treatment in traditional hospital environments.
+At the same time, utilising the benefits of AI, bespoke care and treatment plans will result in faster, more effective therapies that reduce the time patients spend in hospitals.
+
+\paragraph{Conclusion-} The trends show that he future of healthcare indicate that it will take a convergence of innovations and interventions from various sectors and industries to achieve improved operational capacity and efficiency in healthcare delivery. It is clear that innovation in healthcare isn’t determined by technology alone, nor is it restricted to direct improvements in human health and wellbeing. Advances in biological science, for example, will improve human health through new cell, gene and RNA therapies; but in the coming decades
+a larger impact is expected in other sectors, including agriculture, consumer products and energy production. This in turn could support improved nutrition, personalised care and a healthier environment.\\
+
+An integrated, ecosystem-based approach to healthcare will therefore be key in ensuring that trust nurtured, whether during a teleconsultation session, during an open, honest discussion with a doctor in a safe, familiar and comfortable environment, or in a variety of settings that span buildings (homes, offices, hospitals), places (community centre, mixed-use developments) and infrastructure networks. Only then will healthcare be able to act as a catalyst not only for total health but also wider socioeconomic, environmental and cultural resilience.
+ 
+
+
+
+
+   
+
+
+
+
+\end{document}
