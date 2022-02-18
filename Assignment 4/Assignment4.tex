@@ -1,0 +1,155 @@
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{0.6,0.3,0}
+
+{%
+\centering
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+}
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+{%
+\centering
+\titlefont Disruptive Innovations In Healthcare \par
+}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.65]{title4.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+
+The term 'Disruptive Innovation,' which was coined by Clayton Christensen, is a process by which a new product or service starts out being less expensive or more accessible and moves upmarket, eventually displacing established competitors. It can also be reffered as making something less expensive and available to many more people. That has huge meaning in health care today.\\
+
+\paragraph{}When it comes to healthcare, we see disruptive innovation as essential. Scientific advances, technological improvements and shifting patient demographics create an environment of constant change. Without disruption, healthcare systems and organisations not only get left behind, but community health and wellbeing also potentially suffers.\\
+
+The COVID-19 pandemic highlighted the importance of disruptive innovation. As the pandemic spread, healthcare systems globally scrambled to manage patient care, implement contact tracing and attempt to limit the spread. Countries with the resources to prioritise and quickly embrace digital healthcare advances could better track developments and manage impacts. Meanwhile, other – less fortunate – nations struggled, with serious consequences.
+
+\paragraph{Right time for disrupyive innovations-}The right time for your organisation will depend on the type of change you want to make, and what’s driving it.\\
+
+\begin{description}[font=$\bullet$~\normalfont\scshape\color{red!50!black}]
+\item [During a crisis]: over the past year, the COVID-19 pandemic has presented unique opportunities for healthcare organisations to introduce new practices and adapt to changing circumstances.
+
+\item[An imbalance in the industry]: a limited number of key players in a sector can lead to innovation being stifled. Larger organisations tend to continue with proven practices, often facing little to no competition, which gives organisations with new ideas an opportunity to create change.
+
+\item[Out-of-date technology]: sectors that use old technology are particularly ripe for disruption. Old processes can create roadblocks for both staff and customers, creating a need for new products or services and the appetite to embrace them. 
+
+\item[Patients are ready]: if there’s a gap between what patients need (or are demanding, according to your research) and what you offer, they’ll likely embrace innovations quickly. 
+
+\end{description}
+
+\paragraph{Examples of disruptive innovation in healthcare-}
+
+\begin{description}[font=$\bullet$~\normalfont\scshape\color{red!50!black}]
+
+\item[Automation in COVID-19 antibody testing]: the UK’s NHS has been trialling bots to manage testing employees for COVID-19 antibodies. The automated process covers three stages – submitting the request, patient input and sending results. This ‘light-touch’ system reduces risks to staff while allowing them to focus on delivering great healthcare. 
+
+\item[Home monitoring applications]: patient self-assessment and self-care have become a key part of healthcare innovation since widespread smartphone adoption created easy internet access. In France, the app Covidom helps patients to manage their mild to moderate COVID-19 symptoms at home. The app allows a regional control centre to monitor and analyse all results, ensuring patients at home can be hospitalised or have an ambulance called if necessary. 
+
+\item[Wearable technology]: in Shanghai, healthcare organisations used Internet of Things (IoT) technology to help alleviate resourcing pressures. They connected Bluetooth sensors to a multi-patient management system to provide real-time temperature data. This enabled staff to respond rapidly and appropriately to changes while reducing the risk of healthcare worker infections.
+
+\end{description}
+
+\paragraph{Creating the right environment for disruption-} Behind any disruptive innovation lies an organisational culture that encourages employees to challenge the status quo. If you’re on the path to being a disruptive innovator, here are four things you’ll need to consider in your business model.\\
+
+\begin{description}[font=$\bullet$~\normalfont\scshape\color{red!50!black}]
+
+\item[Encourage risk-taking]: Healthy risk-taking is fundamental to creating disruptive innovation. Building risk into core values, rewarding risk-taking and leading by example all encourage employees to think outside the box and test new ideas. 
+
+\item[ Make mistakes OK]: Changing the way employees think about mistakes can change the way they work. Making mistakes and learning from them is a part of any innovation, so an environment where employees feel safe to make mistakes is crucial. 
+
+\item[Break through barriers]: Innovation can be stifled by red tape and inflexible rules. Creating a space where unnecessary hierarchies, approvals or rules don’t constrain people can encourage creativity and help new ideas come to life.
+
+\item[Tap into different ways of thinking]: Innovation can lie buried within your organisation in less vocal, less visible employees who hesitate to share their ideas. Consider different ways to elicit employee participation that cater for different personalities and perspectives.
+
+\end{description}
+
+
+ 
+ 
+
+
+
+
+   
+
+
+
+
+\end{document}
