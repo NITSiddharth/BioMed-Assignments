@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{1.0.7,0.9}
+
+{%
+\centering
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+}
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+{%
+\centering
+\titlefont Solutions  Provided By Biomedical Engineers towards Covid-19 \par
+}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.35]{title 6.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+
+When a pandemic arises, certain roles have to put their workload into overdrive to cope with the situation, but also find solutions to additional issues. The nation pulls together in a heroic effort to try and comfort one another and help others through difficult times.\\
+
+One area which is in high demand is biomedical engineering. Throughout the year, biomedical engineers create ways to combine biological functions with technology to make human life more comfortable, but now, they’re needed more than ever to help save lives.\\
+
+Creating devices that can help with the coronavirus outbreak is how biomedical engineers are making a difference. From students to well-seasoned engineers, everyone in the field is attempting to relieve stress on health organisations across the globe. Here are just some of the types of creations biomedical engineers have created.\\
+
+\paragraph{Breathing life to ventilator suppply chains-}There has been worldwide concern that there is a shortage of available ventilators which are required to support patients with this lift threatening illness. For many patients critically ill with COVID-19, a ventilator could be a matter of life or death. The machine works to get oxygen to the lungs whilst removing carbon dioxide, which is essential for patients who are too sick to breathe on their own.\\
+
+Biomedical engineering plays a huge part in manufacturing these breathing devices and ensuring they are compatible. Furthermore, ventilators are very difficult to manufacturer due to their unique structure and programming.\\
+
+\paragraph{Detecting the structure and naure of the virus-}Engineers helped speed up the process of determining the genetic structure of the SAR-Cov-2 virus (severe acute respiratory syndrome coronavirus 2) responsible for COVID-19. They also turned their attention to models and simulations to better understand transmission through aerosol droplet and patterns of transmission.\\
+
+\paragraph{Large Scale prouction of vaccines-}While scientists and clinicians were conducting studies and trials to develop a safe vaccine, in parallel engineers were designing processes to scale up the production of billions of doses. Producing billions of doses of vaccines was by no means an easy tasks with the current technology. But, thanks to the brilliance of the bio medical engineers, we have been able to vaccinate 5 billion people all over the world, in practically no time and have been able arrest the further spread of the pandemic to a large extent.\\
+
+\paragraph{Bringing tech in the play-}Enginners are also working on the design of manufacturing processes to produce the needed therapeutics and to shore up supply chains needed to get the right materials to the right places where they are needed at the right time. In the area of personal protective equipment (PPE), engineers rose to the challenge in meeting demands, addressing shorta- ges, and finding new devices and materials useful for safety and protection. For example, 3-D printed masks, swabs, and face shields along with 3-D printed parts for devices that were being modified to serve as ventilators helped with unmet needs, particularly during the early stages of the pandemic.
+
+For much needed enhancements for testing and surveillance, engineers are behind the rapid development of point-of-care diagnostic tests, employing tools of artificial intelligence (AI), automation, and process control for the production of tests. They are also employing these tools for the development of predictive models simulating real-world conditions.
+
+\paragraph{Easy to use devices-} In countries like China and India, where the citizens to doctor ratios are very bleak, it becomes very difficult access a doctor, especially in the midst of pandemic and lockdown, it becomes an uphill task. But the heroics of the biomedicals engineers has helped people to maintain and monitor the health using devices like pulse oximeter, steam vaporizer and thermeters, just to name a few. We have also witnessed the practical use case of tele-medicine during the pandemic, when the doors of the hospitals were almost shut for non-covid patients, without tele-medicine, the havoc wrecking pandemic woud have caused a greater destruction.
+
+
+
+
+
+
+\end{document}
