@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, citecolor = blue, linkcolor = blue, urlcolor = blue}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{1\textwidth}
+
+
+\definecolor{titlepagecolor}{rgb}{0.9,0.1,0.3}
+
+{%
+\centering
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+}
+    
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-390pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+
+
+\begin{scope}[titlepagecolor!40,line width=18pt,rounded corners=5pt]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=12pt,rounded corners=5pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=8pt,rounded corners=5pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);   
+\draw 
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+\begin{document}
+\begin{titlepage}
+
+\noindent
+{%
+\centering
+\titlefont Emerging Technologies In Healthcare \par
+}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{logo.jpeg}
+\end{figure}
+
+
+\vfill
+\noindent
+
+\includegraphics[scale=0.68]{title5.jpeg}\hspace{\fill}
+
+\titlepagedecoration
+ 
+
+\end{titlepage}
+
+\clearpage
+
+Wherever we look in the healthcare industry, we can find new technology being used to fight illness, develop new vaccines and medicines, and help people to live healthier lives.\\
+
+Over the last two years, many tech companies have focused on applying their expertise to solve problems caused by the global pandemic. At the same time, many healthcare companies that would not necessarily have traditionally been considered tech companies have turned their attention to technology and its potential to transform the delivery of their products and services.\\
+
+It's clear that the pandemic has accelerated the digitization of the healthcare industry. According to the HIMSS Future of Healthcare Report, 80\% of healthcare providers plan to increase investment in technology and digital solutions over the next five years. We will continue to see growth in areas including telemedicine, personalized medicine, genomics, and wearables, with organizers leveraging artificial intelligence (AI), cloud computing, extender reality (XR), and the internet of things (IoT) to develop and deliver new treatments and services.\\
+
+Here are the predictions for the four biggest trends that will impact the healthcare industry:
+
+\paragraph{Remote healthcare and telemedicine-}Telemedicine has the potential to improve access to healthcare in a world where half the population does not have access to essential services (according to the WHO). During the first months of the pandemic, the percentage of healthcare consultations that were carried out remotely shot up from 0.1\% to 43.5\%. The reasons for this increase are obvious – but even when we take communicable diseases out of the equation, there are plenty of good reasons to develop capabilities to examine, diagnose and treat patients remotely. In remote regions and places where there are shortages of doctors this trend has the potential to save lives by dramatically expanding access to medical treatment.\\
+
+To deliver this, new generation wearable technologies are equipped with heart rate, stress, and blood oxygen detectors, enabling healthcare professionals to accurately monitor vital signs in real-time. The pandemic has even seen the establishment of “virtual hospital wards” where centralized communication infrastructure is used to oversee the treatment of numerous patients, all in their homes.\\
+
+\paragraph{AI and machine learning-} The high-level use case for AI in healthcare, as in other sectors, is in helping to make sense of the huge amount of messy, unstructured data that’s available for capture and analysis. In healthcare, this can take the form of medical image data – X-rays, CT and MRI scans, as well as many other sources, including information on the spread of communicable diseases like covid, the distribution of vaccines, genomic data from living cells, and even handwritten doctors' notes.\\
+
+In the medical field, current trends around the use of AI often involve the augmentation and upskilling of human workers. For example, the surgeons working with the assistance of AR, mentioned in the previous section, are augmented by computer vision – cameras that can recognize what they are seeing and relay the information. Another key use case is automating initial patient contact and triage in order to free up clinicians' time for more valuable work. Telehealth providers like Babylon Health use AI chatbots, powered by natural language processing, to gather information on symptoms and direct inquiries to the right healthcare professionals.\\
+
+
+\paragraph{Personalized medicine and genomics-}Traditionally, medicines and treatments have been created on a "one-size-fits-all" basis, with trials designed to optimize drugs for efficacy with the highest number of patients with the lowest number of adverse side effects. Modern technology, including genomics, AI, and digital twins, allows a far more personalized approach to be taken, resulting in treatments that can be tailored right down to the individual level.\\
+
+For example,AI and modeling software are used to predict the exact dosage of painkillers, including synthetic opiates like fentanyl, for individual patients. These can be highly effective and life-changing for patients suffering chronic pain but extremely dangerous in excessively high doses.
+
+  
+\paragraph{Extended reality for clinical training and treatment-}Extended reality (XR) is a catch-all term covering virtual reality (VR), augmented reality (AR), and mixed reality (MR). All of these involve lenses or headsets that alter our perception of the world – either placing us in entirely virtual environments (VR) or overlaying virtual elements on real-time images of the world around us (AR/MR).\\
+
+VR headsets are used to train doctors and surgeons, allowing them to get intimately acquainted with the workings of the human body without putting patients at risk, or requiring a supply of medical cadavers.
+
+VR is also used in treatment. This can be a part of therapy, where it has been used to train children with autism in social and coping skills. It's also been used to facilitate cognitive behavioral therapy (CBT) to assist with chronic pain, anxiety, and even schizophrenia, where treatments have been developed that aim to allow sufferers to work through their fears and psychosis in safe and non-threatening environments.\\
+
+The number of applications for AR in healthcare will also continue to grow in 2022. For example, the AccuVein system is designed to make it easier for doctors and nurses to locate veins when they need to give injections by detecting the heat signature of the blood flow and highlighting it on the patient’s arm.\\
+
+
+
+
+  
+
+
+ 
+ 
+
+
+
+
+   
+
+
+
+
+\end{document}
